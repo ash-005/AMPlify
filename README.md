@@ -48,7 +48,7 @@ Datasets for training and testing are stored in the `data` folder. Please specif
 * Imbalanced training set: `AMPlify_AMP_train_common.fa` + `AMPlify_non_AMP_train_imbalanced.fa`
 * Imbalanced test set: `AMPlify_AMP_test_common.fa` + `AMPlify_non_AMP_test_imbalanced.fa`
 
-### User-Specified Data:
+### User-specified data:
 
 AMPlify only accepts the 20 standard amino acids. However, if the user specifies a stop codon by adding an asterisk character to the end of a peptide sequence, AMPlify will ignore the last character and allow the peptide to participate in the training or inference stage.
 
@@ -111,7 +111,7 @@ Note: In the default setting, sequences with `AMPlify scores > 3.01` (i.e., `AMP
 ### AMP discovery
 * Additional scripts and data for the AMP discovery pipeline that has been utilized for bullfrog genome mining are provided in `auxiliary/amp_discovery_pipeline` (added in v1.0.1). Parameters for GMAP and MAKER2 are described in the Methods section of the [manuscript](https://doi.org/10.1186/s12864-022-08310-4).
 
-* Additional scripts and data for the AMP mining workflow that has been utilized to mine novel AMPs from the UniProtKB/Swiss-Prot database are provided in `auxiliary/amp_mining_workflow` (added in v2.0.0). Detailed methods can be found in the [manuscript](https://doi.org/10.1101/2024.05.24.595811). The input data and result files are publicly accessible through a [Zenodo repository](https://doi.org/10.5281/zenodo.8133088).
+* Additional scripts and data for the AMP mining workflow that has been utilized to mine novel AMPs from the UniProtKB/Swiss-Prot database are provided in `auxiliary/amp_mining_workflow` (added in v2.0.0). Detailed methods can be found in the [manuscript](https://doi.org/10.1002/pro.70083). The input data and result files are publicly accessible through a [Zenodo repository](https://doi.org/10.5281/zenodo.8133088).
 
 ### Author
 
@@ -129,8 +129,8 @@ If you use AMPlify in your work, please cite our publications:
 --------------------------------------------------------------------------------
 
 2. The data note paper introducing the imbalanced model in addition to the original balanced model:
-> Li, C., Warren, R.L. & Birol, I. Models and data of AMPlify: a deep learning tool for antimicrobial peptide prediction. BMC Res Notes 16, 11 (2023). https://doi.org/10.1186/s13104-023-06279-1
+> Li, C., Warren, R.L. & Birol, I. Models and data of AMPlify: a deep learning tool for antimicrobial peptide prediction. BMC Research Notes 16, 11 (2023). https://doi.org/10.1186/s13104-023-06279-1
 --------------------------------------------------------------------------------
 
 3. The research article for mining the UniProtKB/Swiss-Prot database for novel AMPs:
-> Li, C., Sutherland, D., Salehi, A. et al. Mining the UniProtKB/Swiss-Prot database for antimicrobial peptides. bioRxiv (2024). https://doi.org/10.1101/2024.05.24.595811
+> Li, C., Sutherland, D., Salehi, A. et al. Mining the UniProtKB/Swiss-Prot database for antimicrobial peptides. Protein Science 34, e70083 (2025). https://doi.org/10.1002/pro.70083
