@@ -1,0 +1,23 @@
+# Tuning v2: Transformer + multihead pooling + learned embeddings
+model:
+  backbone: "transformer"
+  pooling: "multihead"
+  input_dim: 20
+  d_model: 256
+  num_layers: 3
+  max_len: 200
+
+training:
+  batch_size: 64
+  epochs: 25
+  lr: 2e-4
+  seed: 42
+  limit_per_class: 2000
+
+logging:
+  save_dir: "amplify/experiments/logs"
+  save_checkpoints: true
+
+optional:
+  use_esm: true
+  esm_dim: 128

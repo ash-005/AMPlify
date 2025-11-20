@@ -1,0 +1,21 @@
+# Example config for AMPlify-v2 experiments
+model:
+  backbone: "transformer"  # choices: lstm, transformer, conformer
+  pooling: "multihead"     # choices: context, multihead, cls
+  input_dim: 20
+  d_model: 256
+  num_layers: 2
+
+training:
+  batch_size: 64
+  epochs: 10
+  lr: 1e-3
+  seed: 42
+
+logging:
+  save_dir: "amplify/experiments/logs"
+  save_checkpoints: true
+
+optional:
+  use_esm: false
+  esm_dim: 1280
