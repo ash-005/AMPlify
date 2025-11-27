@@ -1,0 +1,12 @@
+{
+  "num_models": 5,
+  "roc_auc": 0.9232658037218975,
+  "pr_auc": 0.9308599846920479,
+  "checkpoints": [
+    "amplify/experiments/logs/amplify_v2_final_20251127T115557Z.pt",
+    "amplify/experiments/logs/amplify_v2_final_20251127T113749Z.pt",
+    "amplify/experiments/logs/amplify_v2_final_20251127T104438Z.pt",
+    "amplify/experiments/logs/amplify_v2_final_20251120T092552Z.pt",
+    "amplify/experiments/logs/amplify_v2_final_20251120T092227Z.pt"
+  ]
+}

@@ -162,16 +162,17 @@ def main(argv: Any = None):
     # Prepare dataset (very small quick-run example)
     data_dir = Path("data")
     pos_train = data_dir / "AMPlify_AMP_train_common.fa"
-    neg_train = data_dir / "AMPlify_non_AMP_train_balanced.fa"
+    neg_train = data_dir / "AMPlify_non_AMP_train_imbalanced.fa"  # Use imbalanced (more data)
     pos_test = data_dir / "AMPlify_AMP_test_common.fa"
-    neg_test = data_dir / "AMPlify_non_AMP_test_balanced.fa"
+    neg_test = data_dir / "AMPlify_non_AMP_test_imbalanced.fa"    # Use imbalanced (more test data)
 
     if not (pos_train.exists() and neg_train.exists() and pos_test.exists() and neg_test.exists()):
         print("Data files not found under data/. Skipping quick training run.")
         return
 
     max_len = int(cfg.get("model", {}).get("max_len", 200))
-    limit_per_class = int(cfg.get("training", {}).get("limit_per_class", 500))
+    limit_per_class_cfg = cfg.get("training", {}).get("limit_per_class", 500)
+    limit_per_class = int(limit_per_class_cfg) if limit_per_class_cfg is not None else None
     train_ds = SimpleSeqDataset(str(pos_train), str(neg_train), max_len=max_len, limit_per_class=limit_per_class)
     test_ds = SimpleSeqDataset(str(pos_test), str(neg_test), max_len=max_len, limit_per_class=limit_per_class)
 

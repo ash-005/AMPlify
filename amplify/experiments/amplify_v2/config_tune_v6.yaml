@@ -1,0 +1,23 @@
+# Tuning v6: BiLSTM with 3 layers for more capacity
+model:
+  backbone: "lstm"
+  pooling: "context"
+  input_dim: 20
+  d_model: 256
+  num_layers: 3
+  max_len: 200
+
+training:
+  batch_size: 64
+  epochs: 20
+  lr: 3e-4
+  seed: 45
+  limit_per_class: 2000
+
+logging:
+  save_dir: "amplify/experiments/logs"
+  save_checkpoints: true
+
+optional:
+  use_esm: false
+  esm_dim: null
